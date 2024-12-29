@@ -33,9 +33,11 @@ export default function NewProject({ onFinishingAddProject }) {
   return (
     <>
       <Modal ref={modalRef} btnCaption="Okay">
-        <h2>Invalid Input</h2>
-        <p>You forgot to enter a value.</p>
-        <p>Please ensure you provide a valid value for every input field.</p>
+        <h2 className="text-xl font-bold text-stone-700 my-4">Invalid Input</h2>
+        <p className="text-stone-600 mb-4">You forgot to enter a value.</p>
+        <p className="text-stone-600 mb-4">
+          Please ensure you provide a valid value for every input field.
+        </p>
       </Modal>
       <div className="w-[35rem] mt-16">
         <menu className="flex items-center justify-end gap-4 my-4">
