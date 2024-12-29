@@ -2,7 +2,10 @@ import { useRef } from "react";
 import Input from "../Input/Input";
 import Modal from "../Modal/Modal";
 
-export default function NewProject({ onFinishingAddProject }) {
+export default function NewProject({
+  onFinishingAddProject,
+  onCancellingAddProject,
+}) {
   const modalRef = useRef();
 
   const titleRef = useRef();
@@ -42,7 +45,10 @@ export default function NewProject({ onFinishingAddProject }) {
       <div className="w-[35rem] mt-16">
         <menu className="flex items-center justify-end gap-4 my-4">
           <li>
-            <button className="text-stone-800 hover:text-stone-950 ">
+            <button
+              className="text-stone-800 hover:text-stone-950"
+              onClick={onCancellingAddProject}
+            >
               Cancel
             </button>
           </li>
